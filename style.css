@@ -1,0 +1,274 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman';
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 0.5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+body{
+    background-color: black;
+}
+iframe:focus {
+    outline: none;
+  }
+  
+  iframe[seamless] {
+    display: block;
+  }
+a{
+    font-size: 18px;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-toggle-menu{
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+#toggle-menu{
+    display: none;
+    float: center;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+nav{
+    background-color: black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
+.navbar li{
+    margin-left: 10px;
+}
+.navbar li a{
+    display: block;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.navbar li.active a{
+    color: white;
+}
+
+.container .navbar .active a:hover{
+    border-bottom: .2rem solid rgb(242, 255, 0);
+    padding-bottom: .5rem;
+}
+
+.container .header .logo img{
+    width: 6rem;
+    height: 3.8rem;
+    float: flex;
+}
+
+.home{
+    min-height: 99vh;
+    display: flex;
+    align-items: center;
+    background:url(img/home_background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color:#fff;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color:#eee;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    background: black;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color:#ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: #d3ad7f;
+    text-transform: uppercase;
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2.5rem;
+}
+
+.menu .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border: .1rem solid rgba(255,255,255,.3);    
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+    background:#fff;
+}
+
+.menu .box-container .box:hover > *{
+    color: black;
+}
+.contact .row{
+    display: flex;
+    background: black;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #010103;
+    border: .1rem solid rgba(255,255,255,.3);
+}
+
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: #d3ad7f;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        flex-wrap: wrap;
+    }
+    .navbar{
+        display: none;
+    }
+    .btn-toggle-menu{
+        display: unset;
+    }
+    #toggle-menu:checked +.navbar{
+        display: block;
+        width: 100%;
+    }
+}
